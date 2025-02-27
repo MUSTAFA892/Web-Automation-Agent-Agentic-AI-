@@ -124,13 +124,18 @@ CHROME_PERSISTENT_SESSION=true docker compose up --build
 3.  **Access the WebUI:** Open your web browser and navigate to `http://127.0.0.1:7788`.
 4.  **Using Your Own Browser(Optional):**
     - Set `CHROME_PATH` to the executable path of your browser and `CHROME_USER_DATA` to the user data directory of your browser. Leave `CHROME_USER_DATA` empty if you want to use local user data.
+      - Mac
       - Windows
         ```env
          CHROME_PATH="C:\Program Files\Google\Chrome\Application\chrome.exe"
          CHROME_USER_DATA="C:\Users\YourUsername\AppData\Local\Google\Chrome\User Data"
         ```
+      - Linux
+        ```env
+        CHROME_PATH="/opt/google/chrome/google-chrome"
+        CHROME_USER_DATA="/home/mustafa/.config/google-chrome"
+        ```
         > Note: Replace `YourUsername` with your actual Windows username for Windows systems.
-      - Mac
         ```env
          CHROME_PATH="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
          CHROME_USER_DATA="/Users/YourUsername/Library/Application Support/Google/Chrome"
